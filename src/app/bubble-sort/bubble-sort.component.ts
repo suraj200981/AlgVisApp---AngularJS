@@ -10,6 +10,7 @@ import { Chart } from 'node_modules/chart.js';
 export class BubbleSortComponent implements OnInit {
   
   arrayToSory = [1,2,3,4,5];
+  
 
   constructor() { }
 
@@ -21,7 +22,7 @@ export class BubbleSortComponent implements OnInit {
   public barChartType = 'bar';
   public barChartLegend = true;
   public barChartData = [
-    {data: this.arrayToSory, label: 'Series A'},
+    {data: this.arrayToSory, label: 'Value'},
   ];
   ngOnInit(): void {
    
@@ -46,6 +47,24 @@ export class BubbleSortComponent implements OnInit {
 
     console.log(this.arrayToSory);
     
+  }
+
+  bubbleSort(){
+    //bubble sort algorithm
+    let temp;
+    for(let i = 0; i < this.arrayToSory.length; i++){
+      for(let j = 0; j < this.arrayToSory.length - 1; j++){
+        if(this.arrayToSory[j] > this.arrayToSory[j+1]){
+          temp = this.arrayToSory[j];
+          this.arrayToSory[j] = this.arrayToSory[j+1];
+          this.arrayToSory[j+1] = temp;
+        }
+      }
+    }
+      //update barChartData with new data
+      this.barChartData = [
+        {data: this.arrayToSory, label: 'Series A'},
+      ];
   }
 
 }

@@ -1,7 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 align-self-center">
-            
+            <div style="text-align:center">
+            <h4 style="display: inline; padding-right: 20px;"*ngFor="let num of arrayToSory">{{num}}</h4>
+            </div>  
           <div style="display: block">
             <canvas baseChart
             [datasets]="barChartData"
@@ -12,7 +14,17 @@
           </div>
 
             <button type="button" class="btn btn-primary"(click)="generateRandomNumbers()">Generate</button>
+            <button type="button" class="btn btn-success"(click)="bubbleSort()">Sort</button>
 
         </div>
     </div>
 </div>
+
+<style>
+/*add padding to the left and right of buttons*/
+button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  
+</style>
