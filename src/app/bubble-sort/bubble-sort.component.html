@@ -2,9 +2,17 @@
     <div class="row">
         <div class="col-sm-12 align-self-center">
             
-          <canvas id="myChart" width="100%" height="50%"></canvas>
+          <div style="display: block">
+            <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend">
+    </canvas>
+          </div>
 
-              
+            <button type="button" class="btn btn-primary"(click)="generateRandomNumbers()">Generate</button>
+
         </div>
     </div>
 </div>
