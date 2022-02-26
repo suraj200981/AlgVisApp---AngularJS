@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'node_modules/chart.js';
 
 
 @Component({
