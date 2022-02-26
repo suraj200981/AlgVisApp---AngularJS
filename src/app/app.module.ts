@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BubbleSortComponent } from './bubble-sort/bubble-sort.component';
 import { NgChartsModule } from 'ng2-charts';
+import { InsertionSortComponent } from './insertion-sort/insertion-sort.component';
+import { MergeSortComponent } from './merge-sort/merge-sort.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BubbleSortComponent
+    BubbleSortComponent,
+    InsertionSortComponent,
+    MergeSortComponent
   ],
   imports: [
     BrowserModule,
