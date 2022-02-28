@@ -12,9 +12,10 @@
             [legend]="barChartLegend">
     </canvas>
           </div>
-
-            <button type="button" class="btn btn-primary"(click)="generateRandomNumbers()">Generate</button>
-            <button type="button" class="btn btn-success"(click)="bubbleSort()">Sort</button>
+          <ng-template #tipRandomNums>Generate Random Numbers</ng-template>
+            <button  [ngbTooltip]="tipRandomNums" type="button" class="btn btn-primary"(click)="generateRandomNumbers()">Generate</button>
+            <ng-template #tipSort>Sort numbers with bubble sort algorithm</ng-template>
+            <button [ngbTooltip]="tipSort" type="button" class="btn btn-success"(click)="bubbleSort()">Sort</button>
 
         </div>
     </div>
