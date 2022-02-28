@@ -8,6 +8,7 @@ import { BubbleSortComponent } from './bubble-sort/bubble-sort.component';
 import { NgChartsModule } from 'ng2-charts';
 import { InsertionSortComponent } from './insertion-sort/insertion-sort.component';
 import { MergeSortComponent } from './merge-sort/merge-sort.component';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 @NgModule({
